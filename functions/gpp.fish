@@ -9,7 +9,7 @@ function gpp
 #	echo "inside second if"
         set executable (string replace ".hpp" ".tsk" $argv[1])
     end
-    echo $executable
-    g++ -std=c++17 -I ~/Downloads/boost_1_81_0 -Wno-c++11-extensions $argv[1] -o $executable
+    g++ -std=c++17 -I ./ -I ~/Downloads/boost_1_81_0 -Wno-c++11-extensions $argv[1] -o $executable
+    chmod a+x $executable
     ./$executable
 end
